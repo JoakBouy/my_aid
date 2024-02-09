@@ -13,7 +13,6 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
-
   // page view controller
   PageController _controller = PageController();
 
@@ -23,7 +22,7 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack (
+      body: Stack(
         children: [
           // page view
           PageView(
@@ -40,41 +39,43 @@ class _LandingPageState extends State<LandingPage> {
             ],
           ),
           // dot indicators
-          Container(
-            alignment: Alignment.bottomCenter,
-            padding: const EdgeInsets.only(bottom: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                // skip button
-                GestureDetector(
-                  onTap: () {
-                    _controller.jumpToPage(2);
-                  },
-                  child: Text('Skip'),
-                ),
-                // dot indicators
-                SmoothPageIndicator(controller: _controller, count: 3, effect: const WormEffect()),
-                // next button
-                _isLastPage ? GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => WelcomePage()), // Navigate to WelcomePage
-                    );
-                  },
-                  child: Text('Get Started'),
-                ) :
-                GestureDetector(
-                  onTap: () {
-                    _controller.nextPage(
-                      duration: Duration(milliseconds: 500),
-                      curve: Curves.easeIn
-                    );
-                  },
-                  child: Text('Next'),
-                ),
-              ],
+          Padding(
+            padding: const EdgeInsets.only(bottom: 40), // Increase bottom padding
+            child: Container(
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // skip button
+                  GestureDetector(
+                    onTap: () {
+                      _controller.jumpToPage(2);
+                    },
+                    child: Text('Skip'),
+                  ),
+                  // dot indicators
+                  SmoothPageIndicator(controller: _controller, count: 3, effect: const WormEffect()),
+                  // next button
+                  _isLastPage ? GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => WelcomePage()), // Navigate to WelcomePage
+                      );
+                    },
+                    child: Text('Get Started'),
+                  ) :
+                  GestureDetector(
+                    onTap: () {
+                      _controller.nextPage(
+                        duration: Duration(milliseconds: 500),
+                        curve: Curves.easeIn
+                      );
+                    },
+                    child: Text('Next'),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
