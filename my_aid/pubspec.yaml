@@ -38,6 +38,7 @@ dependencies:
   smooth_page_indicator: ^1.0.0
   introduction_screen: ^3.1.12
   lottie: ^3.0.0
+  flutter_native_splash: ^2.3.10
 
 dev_dependencies:
   flutter_test:

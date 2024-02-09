@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       home: const LandingPage(),
       routes: {
         '/landing': (context) => const LandingPage(),
+        
       } 
     );
   }
