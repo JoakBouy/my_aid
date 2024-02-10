@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:my_aid/landing_page.dart';
-import 'package:my_aid/screens/booking_page.dart';
-import 'package:my_aid/screens/welcome_page.dart';
-import 'package:my_aid/screens/ResetPassword.dart';
-
-
+import 'package:flutter/services.dart';
+import 'package:my_aid/onboarding.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarBrightness: Brightness.dark,
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarDividerColor: Colors.transparent,
+        systemNavigationBarIconBrightness: Brightness.dark,
+        statusBarIconBrightness: Brightness.dark,
+      ));
   runApp(const MyApp());
 }
 
@@ -16,19 +21,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'My AID App',
       theme: ThemeData(
+
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LandingPage(),
-      routes: {
-        '/landing': (context) => const LandingPage(),
-        '/welcome': (context) => const WelcomePage(),
-        '/forgot_password': (context) => const ForgotPassword(),
-        '/reset': (context) => const Resetpassword(),
-        
-      } 
+      home: const OnboardingPage()
     );
   }
 }

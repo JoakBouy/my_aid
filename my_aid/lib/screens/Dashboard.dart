@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DashboardPage extends StatefulWidget {
+  const DashboardPage({super.key});
+
   @override
   DashboardPageState createState() => DashboardPageState();  
 }
@@ -10,9 +12,9 @@ class DashboardPageState extends State<DashboardPage> {
   int _selectedIndex = 0;
 
   final tabs = [
-    HomePage(),
-    SearchPage(),
-    ProfilePage(),
+    const HomePage(),
+    const SearchPage(),
+    const ProfilePage(),
   ];
 
   @override
@@ -23,7 +25,7 @@ class DashboardPageState extends State<DashboardPage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: (int index) => setState(() => _selectedIndex = index),
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -43,11 +45,14 @@ class DashboardPageState extends State<DashboardPage> {
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 }
 
 class SearchPage extends StatelessWidget {
+  const SearchPage({super.key});
 }
 
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
 }
