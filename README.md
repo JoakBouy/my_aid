@@ -18,3 +18,7 @@ Input current Location
 Choose service
 Book and reschedule Apointments
 Create dashboard
+
+## Link to Prototype 
+
+https://previewer.adalo.com/83fe7b84-a1eb-4cf3-aeca-72eeb0a27438?_gl=1*8gbegz*_ga*ODcyNDIwNDEuMTcwNjE1ODM4NA..*_ga_SWT45DV35L*MTcwNjQ2MzkwMC40LjEuMTcwNjQ3MjkzNy4xMS4wLjA 
