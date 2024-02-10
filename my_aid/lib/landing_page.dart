@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_aid/screens/intro_screens/intro_page1.dart';
 import 'package:my_aid/screens/intro_screens/intro_page2.dart';
 import 'package:my_aid/screens/intro_screens/intro_page3.dart';
-import 'package:my_aid/screens/welcome_page.dart'; 
+import 'package:my_aid/screens/welcome_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class LandingPage extends StatefulWidget {
@@ -14,7 +14,7 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
   // page view controller
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
 
   // keep track if we are at the last page or not
   bool _isLastPage = false;
@@ -33,7 +33,7 @@ class _LandingPageState extends State<LandingPage> {
               });
             },
             children: [
-              IntroPage1(),
+              const IntroPage1(),
               IntroPage2(),
               IntroPage3(),
             ],
@@ -51,7 +51,7 @@ class _LandingPageState extends State<LandingPage> {
                     onTap: () {
                       _controller.jumpToPage(2);
                     },
-                    child: Text('Skip'),
+                    child: const Text('Skip'),
                   ),
                   // dot indicators
                   SmoothPageIndicator(controller: _controller, count: 3, effect: const WormEffect()),
@@ -60,19 +60,19 @@ class _LandingPageState extends State<LandingPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => WelcomePage()), // Navigate to WelcomePage
+                        MaterialPageRoute(builder: (context) => const WelcomePage()), // Navigate to WelcomePage
                       );
                     },
-                    child: Text('Get Started'),
+                    child: const Text('Get Started'),
                   ) :
                   GestureDetector(
                     onTap: () {
                       _controller.nextPage(
-                        duration: Duration(milliseconds: 500),
+                        duration: const Duration(milliseconds: 500),
                         curve: Curves.easeIn
                       );
                     },
-                    child: Text('Next'),
+                    child: const Text('Next'),
                   ),
                 ],
               ),

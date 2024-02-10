@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -20,7 +19,7 @@ class IntroPage1 extends StatelessWidget {
             ),
           ),
           // Space for text
-          Expanded(
+          const Expanded(
             flex: 1,
             child: Center(
               child: Text(
