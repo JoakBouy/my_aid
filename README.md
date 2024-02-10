@@ -22,3 +22,9 @@ Create dashboard
 ## Link to Prototype 
 
 https://previewer.adalo.com/83fe7b84-a1eb-4cf3-aeca-72eeb0a27438?_gl=1*8gbegz*_ga*ODcyNDIwNDEuMTcwNjE1ODM4NA..*_ga_SWT45DV35L*MTcwNjQ2MzkwMC40LjEuMTcwNjQ3MjkzNy4xMS4wLjA 
+
+## Group 18 Members
+
+Goodness Ihejiofor -g.ihejiofor@alustudent.com
+Bouy Joak - b.joak@alustudent.com 
+Edouard Sharangabo -e.sharangab@alustudent.com 
