@@ -7,3 +7,14 @@ Ineffective communication and coordination among healthcare providers, patients,
 ## Our solution
 
 My Aid App is a mobile application that helps ALU students in different hubs, be it in Rwanda, Uganda, Nigeria, Kenya, and Ethiopia find healthcare easily, with an internal database system that organizws and facilitates easier access and communication.Our team, "Group 18", has been tasked with creating a Mobile application designs and its integration.
+
+The platform will be a comprehensive and user-friendly tool, allowing students to access healthcare resources, book appointments, receive health-related information, and connect with qualified medical professionals in a new country, focusing on promoting students' well-being and addressing their healthcare needs efficiently.
+
+## Solution design Rational
+
+Login in page
+Explore Dashboard
+Input current Location
+Choose service
+Book and reschedule Apointments
+Create dashboard
