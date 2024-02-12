@@ -1,7 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:my_aid/Components/color.dart';
 import 'package:my_aid/Components/onboarding_data.dart';
+import 'package:my_aid/screens/welcome_page.dart';
+// Make sure to import your WelcomePage
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
@@ -98,7 +99,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
       child: TextButton(
         onPressed: (){
           setState(() {
-            currentIndex != controller.items.length -1? currentIndex++ : null;
+            if (currentIndex != controller.items.length -1) {
+              currentIndex++;
+            } else {
+              // Navigate to WelcomePage using Builder workaround
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Builder(builder: (context) => const WelcomeScreen())),
+              );
+            }
           });
         },
         child: Text(currentIndex == controller.items.length -1? "Get started" : "Continue",
