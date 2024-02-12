@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_aid/Components/color.dart';
 import 'package:my_aid/Components/onboarding_data.dart';
-import 'package:my_aid/screens/welcome_page.dart';
+import 'package:my_aid/screens/Welcome/welcome_page.dart';
 // Make sure to import your WelcomePage
 
 class OnboardingPage extends StatefulWidget {

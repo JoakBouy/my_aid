@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
-import 'package:my_aid/screens/Login_page.dart';
-import 'package:my_aid/screens/SignUp_page.dart';
+import '../../../../constants.dart';
+import 'package:my_aid/screens/Login/Login_page.dart';
+import 'package:my_aid/screens/Signup/Signup_page.dart';
 
 class LoginAndSignupBtn extends StatelessWidget {
   const LoginAndSignupBtn({
@@ -19,7 +19,7 @@ class LoginAndSignupBtn extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return const Login();
+                  return const LoginScreen();
                 },
               ),
             );
@@ -35,7 +35,7 @@ class LoginAndSignupBtn extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) {
-                  return const SignUp();
+                  return const SignUpScreen();
                 },
               ),
             );
