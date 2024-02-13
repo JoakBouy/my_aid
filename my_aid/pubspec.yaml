@@ -43,6 +43,8 @@ dependencies:
   responsive_sizer: ^3.3.0+1
   page_transition: ^2.1.0
   flutter_svg: any
+  flutter_svg_provider: ^1.0.7
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:

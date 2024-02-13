@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_aid/doctor_app_theme.dart';
 import 'package:my_aid/onboarding.dart';
 import 'package:my_aid/layout_data.dart';
 
@@ -24,9 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'My App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: DoctorAppTheme.lightTheme,
       home: const OnboardingPage(),
     );
   }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_aid/Components/color.dart';
 import 'package:my_aid/Components/onboarding_data.dart';
 import 'package:my_aid/screens/Welcome/welcome_page.dart';
-// Make sure to import your WelcomePage
+import 'package:my_aid/responsive.dart'; 
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
@@ -15,15 +15,43 @@ class _OnboardingPageState extends State<OnboardingPage> {
   final controller = OnboardingData();
   final pageController = PageController();
   int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          body(),
-          buildDots(),
-          button(),
-        ],
+    return Responsive(
+      mobile: Scaffold(
+        body: Column(
+          children: [
+            body(),
+            buildDots(),
+            button(),
+          ],
+        ),
+      ),
+      desktop: Scaffold(
+        body: Column(
+          children: [
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: body(),
+                  ),
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        buildDots(),
+                        const SizedBox(height: 20),
+                        button(),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

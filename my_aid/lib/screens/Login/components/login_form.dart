@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_aid/screens/homePage.dart';
 
 import '../../../components/already_have_an_account_acheck.dart';
 import '../../../constants.dart';
@@ -44,7 +45,16 @@ class LoginForm extends StatelessWidget {
           ),
           const SizedBox(height: defaultPadding),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const HomeScreen();
+                  },
+                ),
+              );
+            },
             child: Text(
               "Login".toUpperCase(),
             ),
