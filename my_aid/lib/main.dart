@@ -1,34 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:my_aid/onboarding.dart';
+import 'package:flutter/scheduler.dart';
+import 'core/app_export.dart';
 
+var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        statusBarBrightness: Brightness.dark,
-        systemNavigationBarColor: Colors.transparent,
-        systemNavigationBarDividerColor: Colors.transparent,
-        systemNavigationBarIconBrightness: Brightness.dark,
-        statusBarIconBrightness: Brightness.dark,
-      ));
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
+
+  ///Please update theme as per your need if required.
+  ThemeHelper().changeTheme('primary');
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'My AID App',
-      theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const OnboardingPage()
+    return Sizer(
+      builder: (context, orientation, deviceType) {
+        return MaterialApp(
+          theme: theme,
+          title: 'aid',
+          debugShowCheckedModeBanner: false,
+          initialRoute: AppRoutes.splashScreen,
+          routes: AppRoutes.routes,
+        );
+      },
     );
   }
 }
