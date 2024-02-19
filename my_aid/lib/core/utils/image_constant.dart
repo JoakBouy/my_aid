@@ -9,13 +9,13 @@ class ImageConstant {
   static String imgVector = '$imagePath/logo.png';
 
   // Onboarding One images
-  static String img7xm1 = '$lottiePath/lottie1.json';
+  static String img7xm1 = '$imagePath/img_7xm_1.png';
 
   // Onboarding Two images
-  static String img7xm2 = '$lottiePath/lottie2.json';
+  static String img7xm2 = '$imagePath/img_7xm_2.png';
 
   // Onboarding Three images
-  static String img7xm5 = '$lottiePath/lottie3.json';
+  static String img7xm5 = '$imagePath/img_7xm_5.png';
 
   // Onboarding Four images
   static String imgThumbsUp = '$imagePath/logo.png';

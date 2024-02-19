@@ -15,6 +15,10 @@ dependencies:
   easy_date_timeline: ^1.0.2
   google_maps_flutter: ^2.5.0
   intl: ^0.18.0
+  cloud_firestore: ^4.15.4
+  firebase_core: ^2.25.4
+  cupertino_icons: ^1.0.2
+  custom_image_view: ^5.0.2
 dev_dependencies: 
   flutter_test: 
     sdk: flutter
@@ -24,6 +28,7 @@ flutter:
     - assets/
     - assets/images/
     - assets/lottie/
+
   fonts: 
     - family: Raleway
       fonts: 

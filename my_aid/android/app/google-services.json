@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "440320041360",
+    "project_id": "myaid-818d5",
+    "storage_bucket": "myaid-818d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440320041360:android:450be009c734a6aa035315",
+        "android_client_info": {
+          "package_name": "com.aid.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440320041360-4dbeqsbmoibu3qln0cmddbbpcu5fo76e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9FflkR0QU_TYN9zgKmj07yo6SA0sjEt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440320041360-4dbeqsbmoibu3qln0cmddbbpcu5fo76e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

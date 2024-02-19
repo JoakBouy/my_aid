@@ -1,14 +1,16 @@
-import 'package:aid/core/app_export.dart';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:aid/core/app_export.dart';
+import 'package:aid/core/utils/navigator_service.dart';
+import 'package:aid/widgets/custom_image_view.dart' as aid_custom_image_view;
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key})
-      : super(
-          key: key,
-        );
-
   @override
   Widget build(BuildContext context) {
+    Timer(const Duration(seconds: 3), () {
+      NavigatorService.popAndPushNamed(AppRoutes.onboardingTwoScreen);
+    });
     return SafeArea(
       child: Scaffold(
         backgroundColor: theme.colorScheme.primary,
@@ -17,7 +19,7 @@ class SplashScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CustomImageView(
+              aid_custom_image_view.CustomImageView(
                 imagePath: ImageConstant.imgVector,
                 height: 130.v,
                 width: 117.h,

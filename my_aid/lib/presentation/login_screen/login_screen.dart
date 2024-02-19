@@ -89,7 +89,12 @@ class LoginScreen extends StatelessWidget {
                               CustomElevatedButton(
                                   text: "Login",
                                   onPressed: () {
-                                    onTapLogin(context);
+                                    onTapLogin(BuildContext context) {
+                                      if (_formKey.currentState!.validate()) {
+                                        //TODO: Add login logic
+                                        Navigator.pushNamed(
+                                            context, AppRoutes.homeContainerScreen);}
+                                    };
                                   }),
                               SizedBox(height: 25.v),
                               Align(

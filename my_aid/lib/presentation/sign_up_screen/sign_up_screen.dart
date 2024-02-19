@@ -145,7 +145,7 @@ class SignUpScreen extends StatelessWidget {
         padding: EdgeInsets.only(right: 28.h),
         child: CustomCheckboxButton(
             text:
-                "I agree to the medidoc Terms of Service \nand Privacy Policy",
+                "I agree to the my_aid Terms of Service \nand Privacy Policy",
             isExpandedText: true,
             value: agreeCheckBox,
             onChange: (value) {

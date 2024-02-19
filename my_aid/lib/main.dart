@@ -1,18 +1,19 @@
+import 'package:aid/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/scheduler.dart';
 import 'core/app_export.dart';
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
+void main() async {
 
-  ///Please update theme as per your need if required.
-  ThemeHelper().changeTheme('primary');
-  runApp(MyApp());
+    WidgetsFlutterBinding.ensureInitialized();
+
+    await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+    runApp(MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -22,9 +23,9 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, deviceType) {
         return MaterialApp(
           theme: theme,
-          title: 'aid',
+          title: 'my aid',
           debugShowCheckedModeBanner: false,
-          initialRoute: AppRoutes.splashScreen,
+          initialRoute: AppRoutes.appNavigationScreen,
           routes: AppRoutes.routes,
         );
       },
