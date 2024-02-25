@@ -38,7 +38,10 @@ class SignUpSuccessDialog extends StatelessWidget {
                   style: CustomTextStyles.bodyLargeBluegray400
                       .copyWith(height: 1.50))),
           SizedBox(height: 21.v),
-          CustomElevatedButton(text: "Go to Home")
+          CustomElevatedButton(text: "Go to Home",
+              onPressed: () {
+              Navigator.pushNamed(context, AppRoutes.homeContainerScreen);
+             },)
         ]));
   }
 }
