@@ -10,3 +10,4 @@
 /pubspec.lock
 .git.zip
 .git
+.lib\firebase_options.dart
