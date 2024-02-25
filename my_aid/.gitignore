@@ -1,13 +1,51 @@
-/.dart_tool/
-/.idea/
-/build/
-/.vscode/
+# Android
+*.apk
+*.aab
+*.keystore
+local.properties
 
-/.flutter-plugins
-/.flutter-plugins-dependencies
-/.packages
-/ios/Podfile
-/pubspec.lock
-.git.zip
-.git
-.lib\firebase_options.dart
+# iOS
+*.ipa
+*.xcworkspace
+*.xcarchive
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.lock
+*.DS_Store
+
+# Flutter
+*.flutter-tools
+*.dart_tool
+build/
+flutter_tools/
+
+# IntelliJ/Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Visual Studio Code
+.vscode/
+
+# Miscellaneous
+*.log
+*.tmp
+*.swp
+*.swo
+*.hprof
+*.pid
+*.DS_Store
+.gradle/
+/android/gradle-wrapper/gradle-wrapper.jar
+
+# Firebase
+firebase-debug.log
+firebase-debug.*.log
+.firebase/
+.firebaserc
+firestore.indexes.json
+google-services.json
+google-services.plist
