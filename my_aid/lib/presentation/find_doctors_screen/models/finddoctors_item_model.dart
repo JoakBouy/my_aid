@@ -3,18 +3,30 @@ import '../../../core/app_export.dart';
 /// This class is used in the [finddoctors_item_widget] screen.
 class FinddoctorsItemModel {
   FinddoctorsItemModel({
-    this.general,
-    this.general1,
+    this.image,
+    this.name,
     this.id,
   }) {
-    general = general ?? ImageConstant.imgIconDoctor;
-    general1 = general1 ?? "General";
+    image = image ?? ImageConstant.imgIconDoctor;
+    name = name ?? "General";
     id = id ?? "";
   }
 
-  String? general;
+  String? image;
 
-  String? general1;
+  String? name;
 
   String? id;
 }
+
+  class AmItemModel {
+    final String id;
+    final String am;
+    final bool isSelected;
+
+    AmItemModel({
+      required this.id,
+      required this.am,
+      required this.isSelected,
+    });
+  }

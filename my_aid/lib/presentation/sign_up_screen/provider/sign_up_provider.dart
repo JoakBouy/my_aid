@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:aid/core/app_export.dart';
 import 'package:aid/presentation/sign_up_screen/models/sign_up_model.dart';
@@ -10,16 +11,11 @@ import 'package:aid/presentation/sign_up_screen/models/sign_up_model.dart';
 // ignore_for_file: must_be_immutable
 class SignUpProvider extends ChangeNotifier {
   TextEditingController nameEditTextController = TextEditingController();
-
   TextEditingController emailEditTextController = TextEditingController();
-
   TextEditingController passwordEditTextController = TextEditingController();
-
-  SignUpModel signUpModelObj = SignUpModel();
-
   bool isShowPassword = true;
-
   bool agreeCheckBox = false;
+  SignUpModel signUpModelObj = SignUpModel();
 
   @override
   void dispose() {
@@ -38,4 +34,29 @@ class SignUpProvider extends ChangeNotifier {
     agreeCheckBox = value;
     notifyListeners();
   }
+
+  Future<void> signUp(BuildContext context) async {
+    try {
+      final FirebaseAuth _auth = FirebaseAuth.instance;
+      final UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
+        email: emailEditTextController.text,
+        password: passwordEditTextController.text,
+      );
+
+      // Signed in
+      final User? user = userCredential.user;
+      if (user != null) {
+        // Update the user's display name
+        await user.updateProfile(displayName: nameEditTextController.text);
+        // Show success dialog
+        onTapSignUpButton(context);
+      }
+    } catch (e) {
+      // Show error message
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text(e.toString())));
+    }
+  }
+  
+  void onTapSignUpButton(BuildContext context) {}
 }

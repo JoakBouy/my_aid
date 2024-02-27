@@ -27,6 +27,7 @@ dependencies:
   dio: ^5.4.1
   google_sign_in: ^6.2.1
   firebase_auth: ^4.17.4
+  provider: ^6.1.1
 dev_dependencies: 
   flutter_test: 
     sdk: flutter

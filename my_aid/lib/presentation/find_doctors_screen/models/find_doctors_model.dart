@@ -5,29 +5,29 @@ import 'doctors_item_model.dart';
 class FindDoctorsModel {
   List<FinddoctorsItemModel> finddoctorsItemList = [
     FinddoctorsItemModel(
-        general: ImageConstant.imgIconDoctor, general1: "General"),
+        image: ImageConstant.imgIconDoctor, name: "General"),
     FinddoctorsItemModel(
-        general: ImageConstant.imgIconLungs, general1: "Lungs"),
+        image: ImageConstant.imgIconLungs, name: "Lungs"),
     FinddoctorsItemModel(
-        general: ImageConstant.imgIconDentist, general1: "Dentist"),
+        image: ImageConstant.imgIconDentist, name: "Dentist"),
     FinddoctorsItemModel(
-        general: ImageConstant.imgIconPsychiatrist, general1: "Psychiatrist"),
+        image: ImageConstant.imgIconPsychiatrist, name: "Psychiatrist"),
     FinddoctorsItemModel(
-        general: ImageConstant.imgSearch, general1: "Covid-19"),
+        image: ImageConstant.imgSearch, name: "Covid-19"),
     FinddoctorsItemModel(
-        general: ImageConstant.imgIconSyringe, general1: "Surgeon"),
+        image: ImageConstant.imgIconSyringe, name: "Surgeon"),
     FinddoctorsItemModel(
-        general: ImageConstant.imgIconCardiologist, general1: "Cardio")
+        image: ImageConstant.imgIconCardiologist, name: "Cardio")
   ];
 
   List<DoctorsItemModel> doctorsItemList = [
     DoctorsItemModel(
-        drMarcus: ImageConstant.imgEllipse8864x64, drMarcus1: "Dr. Marcus"),
+        image: ImageConstant.imgEllipse8864x64, name: "Dr. Marcus"),
     DoctorsItemModel(
-        drMarcus: ImageConstant.imgEllipse881, drMarcus1: "Dr. Maria"),
+        image: ImageConstant.imgEllipse881, name: "Dr. Maria"),
     DoctorsItemModel(
-        drMarcus: ImageConstant.imgEllipse882, drMarcus1: "Dr. Stevi"),
+        image: ImageConstant.imgEllipse882, name: "Dr. Stevi"),
     DoctorsItemModel(
-        drMarcus: ImageConstant.imgRectangle961, drMarcus1: "Dr. Luke")
+        image: ImageConstant.imgRectangle961, name: "Dr. Luke")
   ];
 }
