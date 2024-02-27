@@ -1,14 +1,12 @@
 import 'package:aid/core/app_export.dart';
+import 'package:aid/presentation/schedule_page/models/schedule_item_model.dart';
 import 'package:aid/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class ScheduleItemWidget extends StatelessWidget {
-  const ScheduleItemWidget({Key? key})
-      : super(
-          key: key,
-        );
+  final ScheduleItemModel scheduleItem;
 
+  const ScheduleItemWidget({Key? key, required this.scheduleItem}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
