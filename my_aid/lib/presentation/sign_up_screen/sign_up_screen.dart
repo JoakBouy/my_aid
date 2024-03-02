@@ -7,6 +7,7 @@ import 'package:aid/widgets/custom_elevated_button.dart';
 import 'package:aid/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:aid/presentation/sign_up_success_dialog/sign_up_success_dialog.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 // ignore_for_file: must_be_immutable
 class SignUpScreen extends StatelessWidget {

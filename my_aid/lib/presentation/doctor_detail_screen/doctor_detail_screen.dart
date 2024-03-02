@@ -1,3 +1,6 @@
+import 'package:aid/presentation/doctor_detail_screen/models/am_item_model.dart';
+import 'package:aid/presentation/doctor_detail_screen/provider/doctor_detail_provider.dart';
+
 import '../doctor_detail_screen/widgets/am_item_widget.dart';
 import 'package:aid/core/app_export.dart';
 import 'package:aid/widgets/app_bar/appbar_leading_image.dart';
@@ -9,15 +12,15 @@ import 'package:aid/widgets/custom_icon_button.dart';
 import 'package:easy_date_timeline/easy_date_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
+import 'package:provider/provider.dart';
 
 // ignore_for_file: must_be_immutable
 class DoctorDetailScreen extends StatelessWidget {
   DoctorDetailScreen({Key? key}) : super(key: key);
 
-  DateTime selectedDatesFromCalendar1 = DateTime.now();
-
   @override
   Widget build(BuildContext context) {
+    DoctorDetailProvider doctorDetailProvider = Provider.of<DoctorDetailProvider>(context);
     return SafeArea(
         child: Scaffold(
             appBar: _buildAppBar(context),
@@ -114,19 +117,28 @@ class DoctorDetailScreen extends StatelessWidget {
 
   /// Section Widget
   Widget _buildDateTime(BuildContext context) {
+    DoctorDetailProvider doctorDetailProvider = Provider.of<DoctorDetailProvider>(context);
+    List<AmItemModel>? amItems = doctorDetailProvider.amItemList;
     return Column(children: [
       SizedBox(
           height: 64.v,
           width: 327.h,
           child: EasyDateTimeLine(
-              initialDate: selectedDatesFromCalendar1,
+              initialDate: doctorDetailProvider.selectedDatesFromCalendar1 ?? DateTime.now(),
               locale: 'en_US',
               headerProps: EasyHeaderProps(
                   selectedDateFormat: SelectedDateFormat.fullDateDMY,
                   monthPickerType: MonthPickerType.switcher,
                   showHeader: false),
               dayProps: EasyDayProps(width: 46.h, height: 64.v),
-              onDateChange: (selectedDate) {},
+              onDateChange: (selectedDate) {
+                doctorDetailProvider.selectedDatesFromCalendar1 = selectedDate;
+                doctorDetailProvider.updateAmItem(AmItemModel(
+                  id: 'selected_date',
+                  am: selectedDate.toString(),
+                  isSelected: true,
+                ));
+              },
               itemBuilder: (context, dayNumber, dayName, monthName, fullDate,
                   isSelected) {
                 return isSelected
@@ -187,9 +199,26 @@ class DoctorDetailScreen extends StatelessWidget {
       Divider(),
       SizedBox(height: 32.v),
       Wrap(
-          runSpacing: 9.v,
-          spacing: 9.h,
-          children: List<Widget>.generate(9, (index) => AmItemWidget()))
+  runSpacing: 9.v,
+  spacing: 9.h,
+  children: amItems?.map((AmItemModel amItem) {
+    return ChoiceChip(
+      label: Text(amItem.am),
+      selected: amItem.isSelected,
+      onSelected: (bool selected) {
+        doctorDetailProvider.onSelectedChipView1(
+          amItems!.indexOf(amItem),
+          selected,
+        );
+        doctorDetailProvider.updateAmItem(AmItemModel(
+          id: amItem.id,
+          am: amItem.am,
+          isSelected: selected,
+        ));
+      },
+    );
+  }).toList() ?? [],
+),
     ]);
   }
 
