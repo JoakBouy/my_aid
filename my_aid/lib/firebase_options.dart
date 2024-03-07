@@ -44,39 +44,37 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB1eQrsLjkr5nZBCOIz7pq4DpYxH6ynMrg',
-    appId: '1:440320041360:web:ed073fa694618c57035315',
-    messagingSenderId: '440320041360',
-    projectId: 'myaid-818d5',
-    authDomain: 'myaid-818d5.firebaseapp.com',
-    storageBucket: 'myaid-818d5.appspot.com',
+    apiKey: 'AIzaSyAgTBdigkjSiMWcTnesZ-YY2ul3tsmZfWQ',
+    appId: '1:504428186365:web:aa3e67c7712378e2934c94',
+    messagingSenderId: '504428186365',
+    projectId: 'my-aid-trial',
+    authDomain: 'my-aid-trial.firebaseapp.com',
+    storageBucket: 'my-aid-trial.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD9FflkR0QU_TYN9zgKmj07yo6SA0sjEt8',
-    appId: '1:440320041360:android:450be009c734a6aa035315',
-    messagingSenderId: '440320041360',
-    projectId: 'myaid-818d5',
-    storageBucket: 'myaid-818d5.appspot.com',
+    apiKey: 'AIzaSyB68nfjLjkIVHnS4InVCgYIzblL_qwkAK4',
+    appId: '1:504428186365:android:a6ba7467053063e5934c94',
+    messagingSenderId: '504428186365',
+    projectId: 'my-aid-trial',
+    storageBucket: 'my-aid-trial.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD7ZpI-ty2cC0VOA4EWrYGJMCMFj1MHgiE',
-    appId: '1:440320041360:ios:8d5dadf6cdfbdf92035315',
-    messagingSenderId: '440320041360',
-    projectId: 'myaid-818d5',
-    storageBucket: 'myaid-818d5.appspot.com',
-    iosClientId: '440320041360-tovp4pvbtjs6ib0h4ulthsd4aa5vb865.apps.googleusercontent.com',
-    iosBundleId: 'com.aid.app.testProject',
+    apiKey: 'AIzaSyDQMEIesX1uxn4p7jNMhNg0xapS3lHgrQA',
+    appId: '1:504428186365:ios:5703a68ee2e7677a934c94',
+    messagingSenderId: '504428186365',
+    projectId: 'my-aid-trial',
+    storageBucket: 'my-aid-trial.appspot.com',
+    iosBundleId: 'com.example.myAid',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyD7ZpI-ty2cC0VOA4EWrYGJMCMFj1MHgiE',
-    appId: '1:440320041360:ios:408bf72acbb9c99f035315',
-    messagingSenderId: '440320041360',
-    projectId: 'myaid-818d5',
-    storageBucket: 'myaid-818d5.appspot.com',
-    iosClientId: '440320041360-civ583vf2bvgs2ke1vhf1ii0ipbr5k7g.apps.googleusercontent.com',
-    iosBundleId: 'com.aid.aid1.RunnerTests',
+    apiKey: 'AIzaSyDQMEIesX1uxn4p7jNMhNg0xapS3lHgrQA',
+    appId: '1:504428186365:ios:05ed73c55b4da987934c94',
+    messagingSenderId: '504428186365',
+    projectId: 'my-aid-trial',
+    storageBucket: 'my-aid-trial.appspot.com',
+    iosBundleId: 'com.example.myAid.RunnerTests',
   );
 }
