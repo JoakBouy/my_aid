@@ -1,9 +1,8 @@
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/jarrodcolburn/features/flutter-sdk:0": {},
-    "ghcr.io/devcontainers-community/templates/dart:1": {},
-    "ghcr.io/devcontainers-contrib/features/firebase-cli:2": {}
-    
+    "ghcr.io/jarrodcolburn/features/flutter-sdk:3.3.0": {},
+    "ghcr.io/devcontainers-community/templates/dart:2.18.0": {},
+    "ghcr.io/devcontainers-contrib/features/firebase-cli:2.0.15": {}
   }
 }
