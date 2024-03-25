@@ -16,16 +16,14 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]
+  );
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-
   MyApp({super.key});
 
   Future<Widget> _getInitialRoute() async {
@@ -48,12 +46,12 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             home: snapshot.data,
             routes: {
-            '/login': (context) => const FireBaseAuth(),
-            '/home': (context) => const MainPage(),
-            '/profile': (context) => const UserProfile(key: ValueKey('UserProfile')), // Provide a key
-            '/MyAppointments': (context) => const MyAppointments(),
-            '/DoctorProfile': (context) => DoctorProfile(key: ValueKey('DoctorProfile'), doctor: 'Doctor Name'), // Provide a key and the doctor name
-          },
+              '/login': (context) => const FireBaseAuth(),
+              '/home': (context) => const MainPage(),
+              '/profile': (context) => const UserProfile(key: ValueKey('UserProfile')), // Provide a key
+              '/MyAppointments': (context) => const MyAppointments(),
+              '/DoctorProfile': (context) => DoctorProfile(key: ValueKey('DoctorProfile'), doctor: 'Doctor Name'), // Provide a key and the doctor name
+            },
             theme: ThemeData(brightness: Brightness.light),
             debugShowCheckedModeBanner: false,
           );

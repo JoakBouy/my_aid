@@ -7,10 +7,13 @@ import 'package:my_aid/screens/register.dart';
 import '../mainPage.dart';
 
 class SignIn extends StatefulWidget {
+  final FirebaseAuth auth;
+
+  SignIn({required this.auth});
+
   @override
   _SignInState createState() => _SignInState();
 }
-
 class _SignInState extends State<SignIn> {
   FirebaseAuth _auth = FirebaseAuth.instance;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();

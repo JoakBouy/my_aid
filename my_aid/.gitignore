@@ -79,3 +79,11 @@ lib/generated_plugin_registrant.dart
 
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/pubspec.yaml
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/lib/
+
+lib/generated_plugin_registrant.dart
+```
+linux
+macos
+windows
